@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="actionbar_separator">#f8f8f8</color>
+    <color name="actionbar_background_start">#f8f8f8</color>
+    <color name="actionbar_background_end">#e0e0e0</color>
+    <color name="actionbar_background_item_pressed_start">#f8f8f8</color>
+    <color name="actionbar_background_item_pressed_end">#e0e0e0</color>
+    <color name="sign_in_with_facebook">#4a6ea9</color>
+    <color name="sign_in_with_facebook_pressed">#416094</color>
+    <color name="black_overlay">#66000000</color>
+    
+    <color name="list_item_background">#f8f8f8</color>
+    <color name="list_item_background_pressed">#f7f4fa</color>
+    <color name="list_item_divider">#e0e0e0</color>
+
+</resources>

@@ -1,0 +1,129 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PlayerActivity" >
+    
+    <LinearLayout
+        android:id="@+id/player_now_playing"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp">
+        
+        <TextView
+            android:id="@+id/player_current_track_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:text="@string/label_now_playing"
+            android:textStyle="bold" />
+        
+        <TextView
+            android:id="@+id/player_current_track_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dummy_player_current_track_title" />
+        
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/player_current_track_time"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:layout_below="@+id/player_now_playing">
+
+        <TextView
+            android:id="@+id/player_current_track_elapsed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="8dp"
+            android:text="@string/dummy_player_current_track_elapsed" />
+
+        <SeekBar
+            android:id="@+id/player_current_track_seek"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_toLeftOf="@+id/player_current_track_duration"
+            android:layout_toRightOf="@+id/player_current_track_elapsed" />
+
+        <TextView
+            android:id="@+id/player_current_track_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="8dp"
+            android:text="@string/dummy_player_current_track_duration" />
+    </RelativeLayout>
+    
+    <!-- <fragment
+      android:name="com.google.android.youtube.player.YouTubePlayerSupportFragment"
+      android:id="@+id/youtube_fragment"
+      android:layout_width="fill_parent"
+      android:layout_height="match_parent"
+      android:layout_below="@+id/player_current_track_time"
+      android:layout_above="@+id/player_current_track_controls" /> -->
+    <com.loopj.android.image.SmartImageView
+        android:id="@+id/player_current_track_cover"
+        android:src="@drawable/cover"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/player_current_track_time"
+        android:layout_above="@+id/player_current_track_controls"
+        android:contentDescription="@string/content_description_cover" />
+
+    <RelativeLayout
+        android:id="@+id/player_current_track_controls"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:padding="8dp" >
+
+        <ImageButton
+            android:id="@+id/player_current_track_controls_previous"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_player_previous"
+            android:contentDescription="@string/content_description_previous"
+            android:background="#80ffffff" />
+
+        <ImageButton
+            android:id="@+id/player_current_track_controls_play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_player_play"
+            android:contentDescription="@string/content_description_play"
+            android:background="#80ffffff" />
+
+        <ImageButton
+            android:id="@+id/player_current_track_controls_pause"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_player_pause"
+            android:visibility="gone"
+            android:contentDescription="@string/content_description_pause"
+            android:background="#80ffffff" />
+
+        <ImageButton
+            android:id="@+id/player_current_track_controls_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_player_next"
+            android:contentDescription="@string/content_description_next"
+            android:background="#80ffffff" />
+    </RelativeLayout>
+
+</RelativeLayout>
